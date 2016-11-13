@@ -16,4 +16,5 @@
 
 ## Details of implementation
 
-Modified BFS is used to find out the degree of friendship between 2 entities. If the degree of friendship is > 4, without further attempts to find out the actual degree, the solution returns that the given transaction is unverified.
+1. Modified BFS is used to find out the degree of friendship between 2 entities. If the degree of friendship is > 4, without further attempts to find out the actual degree, the solution returns that the given transaction is unverified.
+2. The program is modular to extend for N-degree connections, for eg for 6th degree connections, set MAX_DEGREE = 6+1 = 7 and set variable degree3 to 7.
