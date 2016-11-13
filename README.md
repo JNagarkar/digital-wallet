@@ -3,10 +3,6 @@
 1. Place the antifraud.java file in the src/ folder 
 2. Run.sh is modified so as to run java program. 
 3. Batch_input.txt and Stream_input.txt have not been included, you will require to place that paymo_input folder.  
-4. 
-5. [Repo directory structure] (README.md#repo-directory-structure)
-6. [Testing your directory structure and output format] (README.md#testing-your-directory-structure-and-output-format)
-7. [FAQ] (README.md#faq)
 
 ## Assumptions about the dataset:
 
