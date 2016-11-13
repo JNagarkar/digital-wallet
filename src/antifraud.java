@@ -10,7 +10,7 @@ public class antifraud {
     * */
 
     public static int MAX_DEPTH = 5;
-    public static int numThreads = 10;
+    public static int numThreads = 20;
     public static ArrayList<String> skipped = new ArrayList<>();
     static Map<String, Set<String>> transactionMap = new HashMap<>();
     private static String firstDegree;
@@ -105,8 +105,7 @@ public class antifraud {
             while ((line = br.readLine()) != null) {
                 // use comma as separator
                 if (line.contains(",")) {
-                    testTransactions.add(line);
-                
+                    testTransactions.add(line);                
                 }
             }
         } catch (FileNotFoundException e) {
@@ -125,7 +124,7 @@ public class antifraud {
 
         // Counts the size of arrayList and partition the arraylist in 10-partitions given to seperate threads
         int count = testTransactions.size();
-        if (count < 10) {
+        if (count < 20) {
             numThreads = count;
         }
         int eachThreadCount = count / numThreads;
