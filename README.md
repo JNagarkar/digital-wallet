@@ -11,7 +11,7 @@
 
 ## Techniques used to speed-up:
 
-1. If you are running large amount of streaming data, there is a provision to increase the number of threads. (By-default, 10 threads are being used). 
+1. If you are running large amount of streaming data, there is a provision to increase the number of threads. (By-default, 20 threads are being used). 
 2. Two Level lookup has been provided in the searching algorithm to decrease number of iterations. 
 
 ## Details of implementation
