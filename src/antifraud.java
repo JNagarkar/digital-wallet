@@ -16,13 +16,11 @@ public class antifraud {
     private static String firstDegree;
     private static String secondDegree;
     private static String fourthDegree;
+    private static int degree1 = 2;
+    private static int degree2 = 3;
+    private static int degree3 = 5;
 
     public static void main(String[] args) throws IOException {
-//            String batchFile = "//home//jaydatta//IdeaProjects//digital-wallet//paymo_input//test_input.csv";
-        //           String streamFile = "//home//jaydatta//IdeaProjects//digital-wallet//paymo_input//query_input.csv";
-
-//        String batchFile = "//home//jaydatta//IdeaProjects//digital-wallet//paymo_input//batch_payment.txt";
-        //       String streamFile = "//home//jaydatta//IdeaProjects//digital-wallet//paymo_input//stream_payment.txt";
 
         String batchFile = args[0];
         String streamFile = args[1];
@@ -193,9 +191,9 @@ public class antifraud {
             currentLevel++;
         }
 
-        // Program Control reaches only when level greater than 4 is obtained, so this is
-        // never in the list of verified results.
-        return (currentLevel + 4);
+        // Program Control reaches only when level greater than MAX_LEVEL is obtained, so this is
+        // always returns unverified (> MAX_DEGREE) results.
+        return (currentLevel + 2);
     }
 
     /*
@@ -229,9 +227,9 @@ public class antifraud {
     * */
     public static String[] printingArray(int depth) {
         String[] returnArray = new String[3];
-        returnArray[0] = depth < 2 ? "trusted" : "unverified";
-        returnArray[1] = depth < 3 ? "trusted" : "unverified";
-        returnArray[2] = depth < 5 ? "trusted" : "unverified";
+        returnArray[0] = depth < degree1 ? "trusted" : "unverified";
+        returnArray[1] = depth < degree2 ? "trusted" : "unverified";
+        returnArray[2] = depth < degree3 ? "trusted" : "unverified";
         return returnArray;
     }
 
