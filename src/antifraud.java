@@ -97,17 +97,16 @@ public class antifraud {
 
         BufferedReader br = null;
         String line = "";
-        int firstHund = 0;
         List<String> testTransactions = new ArrayList<>();
         try {
             br = null;
             br = new BufferedReader(new FileReader(streamFile));
             br.readLine();
-            while ((line = br.readLine()) != null && (firstHund < 1000000)) {
+            while ((line = br.readLine()) != null) {
                 // use comma as separator
                 if (line.contains(",")) {
                     testTransactions.add(line);
-                    firstHund++;
+                
                 }
             }
         } catch (FileNotFoundException e) {
